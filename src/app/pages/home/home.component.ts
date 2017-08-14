@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavTabComponent } from '../../common/nav-tab/nav-tab.component'
 
 @Component({
   selector: 'app-home',
