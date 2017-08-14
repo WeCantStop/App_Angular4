@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReserveComponent } from './pages/reserve/reserve.component';
 import { NavTabComponent } from './common/nav-tab/nav-tab.component';
+import { ActivityComponent } from './pages/activity/activity.component';
+import { FindComponent } from './pages/find/find.component';
+import { MyComponent } from './pages/my/my.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavTabComponent,
     HomeComponent,
-    ReserveComponent
+    ReserveComponent,
+    ActivityComponent,
+    FindComponent,
+    MyComponent
   ],
   imports: [
     BrowserModule,
