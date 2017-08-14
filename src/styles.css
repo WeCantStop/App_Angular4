@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* 引入字体图标 */
+@import './icon-font/style.css';
+
 html {
   font-family: "sans-serif, arial, 宋体, Helvetica Neue, Helvetica, STHeiTi";
   -ms-text-size-adjust: 100%;
@@ -312,7 +315,6 @@ input[type="submit"] {
   transition-property: all;
 }
 
-
 .btn-grey {
   background: #f2f2f2;
   padding: 0;
@@ -432,6 +434,7 @@ a[title="站长统计"] {
 
 
 /*浮动*/
+
 .fl {
   float: left;
 }
@@ -985,4 +988,8 @@ a[title="站长统计"] {
 
 .icon-find-border:before {
   color: #000 !important;
+}
+
+.main-container {
+  margin-top: 44px;
 }

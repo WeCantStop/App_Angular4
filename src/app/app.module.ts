@@ -11,6 +11,7 @@ import { NavTabComponent } from './common/nav-tab/nav-tab.component';
 import { ActivityComponent } from './pages/activity/activity.component';
 import { FindComponent } from './pages/find/find.component';
 import { MyComponent } from './pages/my/my.component';
+import { HeaderComponent } from './common/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MyComponent } from './pages/my/my.component';
     ReserveComponent,
     ActivityComponent,
     FindComponent,
-    MyComponent
+    MyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

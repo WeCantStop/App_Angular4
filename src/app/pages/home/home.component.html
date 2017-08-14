@@ -1,4 +1,7 @@
 <!Doctype html>
-<h2>It's Home page</h2>
-<button>test click</button>
-<app-nav-tab></app-nav-tab>
+<app-header title="首页" headerImg="/assets/logo.png" leftText="全球" [clickLeft]="clickL"></app-header>
+<div class="main-container">
+  <h2>It's Home page</h2>
+  <button (click)="btnClick()">test click</button>
+</div>
+<app-nav-tab index="1"></app-nav-tab>
