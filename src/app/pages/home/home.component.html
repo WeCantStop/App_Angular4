@@ -3,7 +3,7 @@
 <div class="main-container">
     <h1>{{ 'hello' | translate }}</h1>
     <h2>It's Home page</h2>
-    <button (click)="btnClick()">test click</button>
+    <button (click)="btnClick()">change language</button>
     <div class="person-wrapper">
         <ul>
             <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
