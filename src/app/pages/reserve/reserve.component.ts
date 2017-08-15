@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { NavTabComponent } from './../../common/nav-tab/nav-tab.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-reserve',
-  templateUrl: './reserve.component.html',
-  styleUrls: ['./reserve.component.css']
+    selector: 'app-reserve',
+    templateUrl: './reserve.component.html',
+    styleUrls: ['./reserve.component.css']
 })
 export class ReserveComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

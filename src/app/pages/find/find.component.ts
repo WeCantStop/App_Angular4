@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { NavTabComponent } from './../../common/nav-tab/nav-tab.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-find',
-  templateUrl: './find.component.html',
-  styleUrls: ['./find.component.css']
+    selector: 'app-find',
+    templateUrl: './find.component.html',
+    styleUrls: ['./find.component.css']
 })
 export class FindComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

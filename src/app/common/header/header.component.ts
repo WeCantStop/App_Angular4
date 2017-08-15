@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
 
 /**
@@ -14,16 +14,17 @@ import { Component, OnInit, Input } from '@angular/core';
  * clickLeft: 传入function,点击左边事件
  */
 export class HeaderComponent implements OnInit {
-  @Input() title;
-  @Input() headerImg;
-  @Input() showBack;
-  @Input() leftText;
-  @Input() clickLeft;
+    @Input() title;
+    @Input() headerImg;
+    @Input() showBack;
+    @Input() leftText;
+    @Input() clickLeft;
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 
 }

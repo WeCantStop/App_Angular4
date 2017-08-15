@@ -38,7 +38,8 @@ import {HighLightDirective} from './attribute-directives/high-light.directive';
         TranslateModule.forRoot({
             provide: TranslateLoader,
             useFactory: (createTranslateLoader),
-            deps: [Http]})
+            deps: [Http]
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]

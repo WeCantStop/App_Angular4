@@ -1,13 +1,13 @@
 <!Doctype html>
 <app-header title="首页" headerImg="/assets/logo.png" leftText="全球" [clickLeft]="clickL"></app-header>
 <div class="main-container">
-  <h1>{{ 'hello' | translate }}</h1>
-  <h2>It's Home page</h2>
-  <button (click)="btnClick()">test click</button>
-  <div class="person-wrapper">
-    <ul>
-      <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
-    </ul>
-  </div>
+    <h1>{{ 'hello' | translate }}</h1>
+    <h2>It's Home page</h2>
+    <button (click)="btnClick()">test click</button>
+    <div class="person-wrapper">
+        <ul>
+            <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
+        </ul>
+    </div>
 </div>
 <app-nav-tab index="1"></app-nav-tab>
