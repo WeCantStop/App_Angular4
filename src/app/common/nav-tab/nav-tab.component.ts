@@ -25,8 +25,7 @@ export class NavTabComponent implements OnInit {
       if (item.index == this.index) {
         let arr = item.icon.split('-');
         arr[arr.length - 1] = 'full';
-        let result = arr.join("-");
-        item.icon = result;
+        item.icon = arr.join("-");
       }
     })
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavTabComponent } from '../../common/nav-tab/nav-tab.component';
 import { HeaderComponent } from '../../common/header/header.component';
+import { HighLightDirective } from './../../attribute-directives/high-light.directive';
 
 @Component({
   selector: 'app-home',
@@ -11,15 +12,17 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  persons = ['刘备', '关羽', '张飞', '赵云'];
+
   ngOnInit() {
   }
 
-  btnClick(){
-    console.log(123);
+  btnClick() {
+    console.log('test click');
   }
 
-  clickL(){
-    console.log("点击左边");
+  clickL() {
+    console.log("click left");
   }
 
 }
