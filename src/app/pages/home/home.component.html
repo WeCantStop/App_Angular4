@@ -4,6 +4,8 @@
     <h1>{{ 'hello' | translate }}</h1>
     <h2>It's Home page</h2>
     <button (click)="btnClick()">change language</button>
+    <button (click)="onShow('ios')">showActions</button>
+    <p></p>
     <div class="person-wrapper">
         <ul>
             <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
@@ -11,3 +13,4 @@
     </div>
 </div>
 <app-nav-tab index="1"></app-nav-tab>
+<weui-actionsheet #ios [menus]="menus" [config]="config"></weui-actionsheet>

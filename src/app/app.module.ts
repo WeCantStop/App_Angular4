@@ -1,5 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
+
+import { WeUiModule } from 'ngx-weui';
 
 import {AppRouterModule} from './router';
 
@@ -33,13 +36,15 @@ import {HighLightDirective} from './attribute-directives/high-light.directive';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRouterModule,
         HttpModule,
         TranslateModule.forRoot({
             provide: TranslateLoader,
             useFactory: (createTranslateLoader),
             deps: [Http]
-        })
+        }),
+        WeUiModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
