@@ -12,6 +12,7 @@ export class ChildComponent implements OnInit {
         testRef: ElementRef;
     name = 'Tom';
     age = 18;
+    childName: string;
 
     constructor(private renderer: Renderer2) {
     }

@@ -12,6 +12,7 @@ export class ReserveComponent implements OnInit, AfterViewInit {
     tplVcRef: TemplateRef<any>;
     name: string;
     age: string;
+    childName: string = 'hello,Child';
 
     itemGroup: any = [
         [

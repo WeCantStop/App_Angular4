@@ -104,11 +104,9 @@ input {
   -webkit-user-select: text !important;
 }
 
-//处理ios input框value下字体灰色的兼容性问题
+/*处理ios input框value下字体灰色的兼容性问题*/
 input:disabled,
 input[disabled] {
-  color: $black;
-  -webkit-text-fill-color: $black;
   -webkit-opacity: 1;
   opacity: 1;
 }
@@ -122,7 +120,6 @@ input[disabled] {
 }
 
 .disable-text {
-  color: $disabledColor;
   font-size: 12px;
 }
 
@@ -301,10 +298,6 @@ input[type="submit"] {
   font-size: 12px;
 }
 
-.golden-text {
-  color: $golden;
-}
-
 .transition {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -368,10 +361,6 @@ input[type="submit"] {
   text-align: center;
   box-sizing: border-box;
   vertical-align: middle;
-}
-
-.skirt-disabled {
-  background-color: $grayBorderColor !important;
 }
 
 .form-pl15 {

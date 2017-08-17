@@ -10,10 +10,11 @@
     <h3>TemplateRef 和 ViewContainerRef 生成的</h3>
     <span>结束</span>
 </ng-template>
-<app-child account="will" (send)="getData($event)"></app-child>
+<br>
+<button (click)="child.childName = this.childName">模板变量</button>
 <div>
-    <p>子组件传递过来的值</p>
-    <p>name: {{name}}</p>
-    <p>age: {{age}}</p>
+    <p>子组件传递过来的值: name: {{name}},age: {{age}}</p>
 </div>
+<app-child account="will" (send)="getData($event)" #child></app-child>
+
 <app-nav-tab index="2"></app-nav-tab>
