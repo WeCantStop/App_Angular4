@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2} from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -8,13 +8,16 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class ChildComponent implements OnInit {
     @Input() account: string;
     @Output() send: EventEmitter<any> = new EventEmitter<any>();
+    @ViewChild ('testRef')
+        testRef: ElementRef;
     name = 'Tom';
     age = 18;
 
-    constructor() {
+    constructor(private renderer: Renderer2) {
     }
 
     ngOnInit() {
+        this.renderer.setStyle(this.testRef.nativeElement, 'background-color', 'yellowgreen');
     }
 
     sendToParent() {
