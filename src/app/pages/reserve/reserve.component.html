@@ -1,5 +1,5 @@
 <!Doctype html>
-<h2>It's reserve page</h2>
+<h2>Reserve page</h2>
 <weui-picker placeholder="Pick a item"
              [groups]="itemGroup"
              [options]="{cancel:'取消', confirm:'确定', backdrop: true}"></weui-picker>
@@ -7,7 +7,13 @@
 <!-- 注意 Angular4 已变为ng-template -->
 <ng-template #tpl>
     <div>开始</div>
-    <h3>我是template h3</h3>
+    <h3>TemplateRef 和 ViewContainerRef 生成的</h3>
     <span>结束</span>
 </ng-template>
+<app-child account="will" (send)="getData($event)"></app-child>
+<div>
+    <p>子组件传递过来的值</p>
+    <p>name: {{name}}</p>
+    <p>age: {{age}}</p>
+</div>
 <app-nav-tab index="2"></app-nav-tab>

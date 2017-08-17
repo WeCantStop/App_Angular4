@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
     styleUrls: ['./nav-tab.component.css']
 })
 export class NavTabComponent implements OnInit {
-    @Input() index;
+    @Input() index: string;
 
     constructor(private router: Router) {
     }

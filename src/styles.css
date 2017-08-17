@@ -673,6 +673,7 @@ a[title="站长统计"] {
 }
 
 .main-container {
+  padding-top: 44px;
   box-sizing: border-box;
   position: static;
   margin: 0px;
@@ -988,8 +989,4 @@ a[title="站长统计"] {
 
 .icon-find-border:before {
   color: #000 !important;
-}
-
-.main-container {
-  margin-top: 44px;
 }

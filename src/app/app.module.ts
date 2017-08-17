@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 
 import { WeUiModule } from 'ngx-weui';
@@ -20,6 +20,7 @@ import {ActivityComponent} from './pages/activity/activity.component';
 import {FindComponent} from './pages/find/find.component';
 import {MyComponent} from './pages/my/my.component';
 import {HeaderComponent} from './common/header/header.component';
+import { ChildComponent } from './components/child/child.component';
 import {HighLightDirective} from './attribute-directives/high-light.directive';
 
 @NgModule({
@@ -32,7 +33,8 @@ import {HighLightDirective} from './attribute-directives/high-light.directive';
         FindComponent,
         MyComponent,
         HeaderComponent,
-        HighLightDirective
+        HighLightDirective,
+        ChildComponent
     ],
     imports: [
         BrowserModule,
