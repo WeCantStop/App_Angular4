@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild, AfterViewInit, ViewContainerRef} from '@angular/core';
 import {PickerData, PickerOptions, PickerService} from 'ngx-weui/picker';
 
 @Component({
@@ -6,7 +6,11 @@ import {PickerData, PickerOptions, PickerService} from 'ngx-weui/picker';
     templateUrl: './reserve.component.html',
     styleUrls: ['./reserve.component.css']
 })
-export class ReserveComponent implements OnInit {
+export class ReserveComponent implements OnInit, AfterViewInit {
+    @ViewChild('tpl')
+    tpl: TemplateRef<any>;
+    @ViewChild('tpl', { read: ViewContainerRef })
+    tplVcRef: TemplateRef<any>;
     res: any = {
         mitem: ''
     };
@@ -42,4 +46,11 @@ export class ReserveComponent implements OnInit {
 
     ngOnInit() {
     }
+
+    ngAfterViewInit() {
+        // console.log(this.tplVcRef);
+        /** templateRef 里的 createEmbeddedView 方法配合 elementRef 插入模板**/
+        this.tplVcRef.createEmbeddedView(this.tpl);
+    }
+
 }

@@ -3,4 +3,11 @@
 <weui-picker placeholder="Pick a item"
              [groups]="itemGroup"
              [options]="{cancel:'取消', confirm:'确定', backdrop: true}"></weui-picker>
+
+<!-- 注意 Angular4 已变为ng-template -->
+<ng-template #tpl>
+    <div>开始</div>
+    <h3>我是template h3</h3>
+    <span>结束</span>
+</ng-template>
 <app-nav-tab index="2"></app-nav-tab>
