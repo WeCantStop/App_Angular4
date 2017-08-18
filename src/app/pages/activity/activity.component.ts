@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GetPersonsService} from '../../services/getPersons';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {toPromise} from 'rxjs/operator/toPromise';
 
 @Component({
     selector: 'app-activity',
@@ -45,8 +44,9 @@ export class ActivityComponent implements OnInit {
         //         console.log(val);
         //     }
         // );
-        this.getPersonService.getDataByGet().then(res => {
-            console.log(res);
-        });
+        this.getPersonService.getDataByGet()
+            .then(res => {
+                console.log(res);
+            });
     }
 }
