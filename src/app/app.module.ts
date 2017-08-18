@@ -24,6 +24,9 @@ import {HeaderComponent} from './common/header/header.component';
 import {ChildComponent} from './components/child/child.component';
 import {HighLightDirective} from './attribute-directives/high-light.directive';
 
+/** Service **/
+import {GetPersonsService} from './services/getPersons';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -50,7 +53,7 @@ import {HighLightDirective} from './attribute-directives/high-light.directive';
         }),
         WeUiModule.forRoot()
     ],
-    providers: [],
+    providers: [GetPersonsService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
