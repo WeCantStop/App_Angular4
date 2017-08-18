@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GetPersonsService} from '../../services/getPersons';
 import {HttpClient, HttpParams} from '@angular/common/http';
+import {toPromise} from 'rxjs/operator/toPromise';
 
 @Component({
     selector: 'app-activity',
@@ -36,13 +37,16 @@ export class ActivityComponent implements OnInit {
 
     // get请求方式
     getDataByGet() {
-        const params = new HttpParams()
-            .set('itemId', '123')
-            .set('limitToFirst', '999');
-        this.http.get('http://localhost:3008/users/queryDuoDuo', {params}).subscribe(
-            val => {
-                console.log(val);
-            }
-        );
+        // const params = new HttpParams()
+        //     .set('itemId', '123')
+        //     .set('limitToFirst', '999');
+        // this.http.get('http://localhost:3008/users/queryDuoDuo', {params}).subscribe(
+        //     val => {
+        //         console.log(val);
+        //     }
+        // );
+        this.getPersonService.getDataByGet().then(res => {
+            console.log(res);
+        });
     }
 }
