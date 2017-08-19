@@ -45,8 +45,6 @@ export class ActivityComponent implements OnInit {
         //     }
         // );
         this.getPersonService.getDataByGet()
-            .then(res => {
-                console.log(res);
-            });
+            .subscribe(res => {console.log(res.data)});
     }
 }

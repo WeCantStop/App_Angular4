@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {TranslateService} from 'ng2-translate';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from 'ng2-translate';
 import { SkinType } from 'ngx-weui';
-import {ActionSheetService, ActionSheetConfig, ActionSheetComponent} from 'ngx-weui/actionsheet';
+import { ActionSheetService, ActionSheetConfig, ActionSheetComponent } from 'ngx-weui/actionsheet';
 
 
 @Component({
@@ -12,9 +12,9 @@ import {ActionSheetService, ActionSheetConfig, ActionSheetComponent} from 'ngx-w
 export class HomeComponent implements OnInit {
     @ViewChild('ios') iosAS: ActionSheetComponent;
     menus: any[] = [
-        {text: 'item1', key: '1'},
-        {text: 'item2', key: '2'},
-        {text: 'item3', key: '3'}
+        { text: 'item1', key: '1' },
+        { text: 'item2', key: '2' },
+        { text: 'item3', key: '3' }
     ];
     config: ActionSheetConfig = <ActionSheetConfig>{
         title: '请选择其中一个item'
