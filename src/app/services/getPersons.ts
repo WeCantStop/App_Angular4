@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PERSONS } from '../mock/persons';
 import { Person } from '../mock/Person';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { DataType } from '../mock/mockData';
 
@@ -19,14 +19,6 @@ export class GetPersonsService {
     }
 
     getDataByGet(): Observable<DataType> {
-        // return new Promise((resolve, reject) => {
-        //     this.http.post('http://localhost:3000/users/age', {itemId: 123}, {headers: this.headers})
-        //         .subscribe(
-        //             (res) => {
-        //                 resolve(res.data);
-        //             }
-        //         );
-        // });
         return this.https.post('http://localhost:3000/users/age', { itemId: 123 }).map(res => res.json());
     }
 }

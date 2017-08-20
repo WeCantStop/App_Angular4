@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef, ViewChild, AfterViewInit, ViewContainerRef} from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, AfterViewInit, ViewContainerRef } from '@angular/core';
 
 @Component({
     selector: 'app-reserve',
@@ -50,7 +50,7 @@ export class ReserveComponent implements OnInit, AfterViewInit {
         this.tplVcRef.createEmbeddedView(this.tpl);
     }
 
-    getData(data){
+    getData(data) {
         this.name = data.name;
         this.age = data.age;
     }

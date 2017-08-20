@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {GetPersonsService} from '../../services/getPersons';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { GetPersonsService } from '../../services/getPersons';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
     selector: 'app-activity',
@@ -8,6 +8,8 @@ import {HttpClient, HttpParams} from '@angular/common/http';
     styleUrls: ['./activity.component.css']
 })
 export class ActivityComponent implements OnInit {
+
+    private resData;
 
     constructor(private getPersonService: GetPersonsService, private http: HttpClient) {
     }
@@ -22,7 +24,7 @@ export class ActivityComponent implements OnInit {
 
     // post请求方式
     getDataByPost() {
-        this.http.post('http://localhost:3008/users/age', {itemId: 666}).subscribe(
+        this.http.post('http://localhost:3008/users/age', { itemId: 666 }).subscribe(
             (val) => {
                 console.log(val);
             },
@@ -36,15 +38,10 @@ export class ActivityComponent implements OnInit {
 
     // get请求方式
     getDataByGet() {
-        // const params = new HttpParams()
-        //     .set('itemId', '123')
-        //     .set('limitToFirst', '999');
-        // this.http.get('http://localhost:3008/users/queryDuoDuo', {params}).subscribe(
-        //     val => {
-        //         console.log(val);
-        //     }
-        // );
         this.getPersonService.getDataByGet()
-            .subscribe(res => {console.log(res.data)});
+            .subscribe(res => { 
+                console.log(res.data);
+                this.resData = res.data;
+             });
     }
 }
