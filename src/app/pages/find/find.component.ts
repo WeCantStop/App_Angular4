@@ -17,6 +17,7 @@ export class FindComponent implements OnInit {
         this.userName = '';
         this.userService.getUsers().subscribe(res => {
             console.log(res);
+            this.users = res.data;
         })
     }
 
@@ -24,6 +25,9 @@ export class FindComponent implements OnInit {
         let req = { name: this.userName };
         this.userService.addUser(req).subscribe(res => {
             this.userName = '';
+            this.userService.getUsers().subscribe(res => {
+                this.users = res.data;
+            })
         })
     }
 
