@@ -15,6 +15,7 @@ export class ActivityComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.resData = {};
         this.getPersonService.getPersons().then(res => {
             console.log(res);
         }, res => {
@@ -24,7 +25,7 @@ export class ActivityComponent implements OnInit {
 
     // post请求方式
     getDataByPost() {
-        this.http.post('http://localhost:3008/users/age', { itemId: 666 }).subscribe(
+        this.http.get('http://localhost:3008/users/age').subscribe(
             (val) => {
                 console.log(val);
             },
@@ -39,9 +40,9 @@ export class ActivityComponent implements OnInit {
     // get请求方式
     getDataByGet() {
         this.getPersonService.getDataByGet()
-            .subscribe(res => { 
+            .subscribe(res => {
                 console.log(res.data);
                 this.resData = res.data;
-             });
+            });
     }
 }
