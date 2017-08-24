@@ -19,6 +19,9 @@ export class GetPersonsService {
     }
 
     getDataByGet(): Observable<DataType> {
+        /**
+         * 每次 operator 都会返回一个新的 Observable, 且最终只有一个Observable 会被订阅
+         */
         return this.https.get('http://localhost:3008/users/age').map(res => res.json());
     }
 }

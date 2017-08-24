@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/userService';
 
 @Component({
     selector: 'app-find',
@@ -7,10 +8,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class FindComponent implements OnInit {
 
-    constructor() {
+    private userName;
+    private users;
+    constructor(private userService: UserService) {
     }
 
     ngOnInit() {
+        this.userName = '';
+        this.userService.getUsers().subscribe(res => {
+            console.log(res);
+        })
+    }
+
+    addUser() {
+        let req = { name: this.userName };
+        this.userService.addUser(req).subscribe(res => {
+            this.userName = '';
+        })
     }
 
 }

@@ -40,9 +40,9 @@ export class ActivityComponent implements OnInit {
     // get请求方式
     getDataByGet() {
         this.getPersonService.getDataByGet()
-            .subscribe(res => { 
+            .subscribe(res => {
                 console.log(res.data);
                 this.resData = res.data;
-             });
+            });
     }
 }

@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs';
+
+@Injectable()
+
+export class UserService {
+    /** 设置请求头 **/
+    headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    constructor(private http: HttpClient, private https: Http) {
+    }
+
+    addUser(data): Observable<any> {
+        /**
+         * req: {name: ""}
+         */
+        return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
+    }
+
+    getUsers(): Observable<any> {
+        return this.https.get('http://localhost:3008/users/getUser').map(res => res.json());        
+    }
+}
