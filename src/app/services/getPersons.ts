@@ -19,6 +19,6 @@ export class GetPersonsService {
     }
 
     getDataByGet(): Observable<DataType> {
-        return this.https.get('http://localhost:3000/users/age').map(res => res.json());
+        return this.https.get('http://localhost:3008/users/age').map(res => res.json());
     }
 }
