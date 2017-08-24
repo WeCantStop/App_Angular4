@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { WeUiModule } from 'ngx-weui';
 
@@ -26,6 +27,7 @@ import { HighLightDirective } from './attribute-directives/high-light.directive'
 
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
+import { UserService } from './services/userService';
 
 @NgModule({
     declarations: [
@@ -46,6 +48,7 @@ import { GetPersonsService } from './services/getPersons';
         AppRouterModule,
         HttpModule,
         HttpClientModule,
+        FormsModule,
         TranslateModule.forRoot({
             provide: TranslateLoader,
             useFactory: (createTranslateLoader),
@@ -53,7 +56,10 @@ import { GetPersonsService } from './services/getPersons';
         }),
         WeUiModule.forRoot()
     ],
-    providers: [GetPersonsService],
+    providers: [
+        GetPersonsService,
+        UserService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
