@@ -1,0 +1,12 @@
+.username {
+  padding-left: 50px;
+  margin-top: 4px;
+  display: inline-block;
+  width: 49%;
+}
+
+.delBtn {
+  width: 49%;
+  background-color: #ccc;  
+  display: inline-block;
+}

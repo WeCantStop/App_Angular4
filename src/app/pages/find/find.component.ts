@@ -16,7 +16,6 @@ export class FindComponent implements OnInit {
     ngOnInit() {
         this.userName = '';
         this.userService.getUsers().subscribe(res => {
-            console.log(res);
             this.users = res.data;
         })
     }
@@ -25,6 +24,15 @@ export class FindComponent implements OnInit {
         let req = { name: this.userName };
         this.userService.addUser(req).subscribe(res => {
             this.userName = '';
+            this.userService.getUsers().subscribe(res => {
+                this.users = res.data;
+            })
+        })
+    }
+
+    delUser($event) {
+        let name = $event.name;
+        this.userService.delUser({ name: name }).subscribe(res => {
             this.userService.getUsers().subscribe(res => {
                 this.users = res.data;
             })
