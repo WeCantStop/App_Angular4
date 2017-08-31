@@ -17,7 +17,6 @@ export class ActivityComponent implements OnInit {
     ngOnInit() {
         this.resData = {};
         this.getPersonService.getPersons().then(res => {
-            console.log(res);
         }, res => {
             console.log(res);
         });

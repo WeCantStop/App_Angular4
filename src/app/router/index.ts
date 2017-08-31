@@ -6,9 +6,11 @@ import {ReserveComponent} from '../pages/reserve/reserve.component';
 import {ActivityComponent} from '../pages/activity/activity.component';
 import {FindComponent} from '../pages/find/find.component';
 import {MyComponent} from './../pages/my/my.component';
+import { UserInfoComponent } from '../pages/user-info/user-info.component';
 
 
 const routes: Routes = [
+    {path: 'user/userInfo/:id', component: UserInfoComponent},
     {path: 'home', component: HomeComponent},
     {path: 'reserve', component: ReserveComponent},
     {path: 'activity', component: ActivityComponent},

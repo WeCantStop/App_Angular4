@@ -18,8 +18,8 @@ export class UserService {
         return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
     }
 
-    getUsers(): Observable<any> {
-        return this.https.get('http://localhost:3008/users/getUser').map(res => res.json());
+    getUsers(data): Observable<any> {
+        return this.https.post('http://localhost:3008/users/getUser',data).map(res => res.json());
     }
 
     delUser(data): Observable<any> {

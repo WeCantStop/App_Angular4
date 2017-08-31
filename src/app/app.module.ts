@@ -24,6 +24,7 @@ import { MyComponent } from './pages/my/my.component';
 import { HeaderComponent } from './common/header/header.component';
 import { ChildComponent } from './components/child/child.component';
 import { HighLightDirective } from './attribute-directives/high-light.directive';
+import { UserInfoComponent } from './pages/user-info/user-info.component';
 
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
@@ -40,7 +41,8 @@ import { UserService } from './services/userService';
         MyComponent,
         HeaderComponent,
         HighLightDirective,
-        ChildComponent
+        ChildComponent,
+        UserInfoComponent
     ],
     imports: [
         BrowserModule,
