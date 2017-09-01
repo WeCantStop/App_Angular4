@@ -6,7 +6,7 @@
  * HostListener => 用于监听宿主元素的点击事件  不需要依赖注入
  * Renderer => 调用renderer对象提供的API设置元素的背景颜色 需要依赖注入
  */
-import {Directive, ElementRef, HostListener, Renderer2, Input} from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, Input } from '@angular/core';
 
 @Directive({
     selector: '[heightLight]'
@@ -18,16 +18,17 @@ export class HighLightDirective {
     private _defaultColor = 'yellowgreen';
     private flag = true;
 
-    constructor(private el: ElementRef,
-                private render: Renderer2) {
+    constructor(
+        private el: ElementRef,
+        private render: Renderer2) {
     }
 
     @HostListener('click')
     onclick() {
-        if ( this.flag ){
+        if (this.flag) {
             this.setColor(this.backgroundColor || this._defaultColor);
             this.flag = false;
-        }else {
+        } else {
             this.setColor('white');
             this.flag = true;
         }

@@ -40,11 +40,9 @@ export class ReserveComponent implements OnInit, AfterViewInit {
         ]
     ];
 
-    constructor() {
-    }
+    constructor() { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
     ngAfterViewInit() {
         this.tplVcRef.createEmbeddedView(this.tpl);

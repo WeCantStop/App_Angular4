@@ -29,8 +29,8 @@ export class FindComponent implements OnInit {
                 this.userName = '';
                 this.userService.getUsers({}).subscribe(res => {
                     this.users = res.data;
-                })
-            })
+                });
+            });
         }
     }
 
@@ -40,8 +40,8 @@ export class FindComponent implements OnInit {
         this.userService.delUser({ name: name }).subscribe(res => {
             this.userService.getUsers({}).subscribe(res => {
                 this.users = res.data;
-            })
-        })
+            });
+        });
     }
 
     // 去用户详情
