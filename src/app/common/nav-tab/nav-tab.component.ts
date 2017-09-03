@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 })
 export class NavTabComponent implements OnInit {
     @Input() index: string;
+    private selectedNav: string;
 
     constructor(private router: Router) {
     }
@@ -21,16 +22,9 @@ export class NavTabComponent implements OnInit {
     ];
 
     ngOnInit() {
-        this.navs.map((item) => {
-            if (item.index === this.index) {
-                let arr = item.icon.split('-');
-                arr[arr.length - 1] = 'full';
-                item.icon = arr.join('-');
-            }
-        });
     }
 
-    selectNav(target) {
+    selectNav($event, target) {
         this.router.navigate([target]);
     }
 

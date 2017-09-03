@@ -16,13 +16,11 @@ import { createTranslateLoader } from './translate/translateLoader';
 /** 视图组件 **/
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ReserveComponent } from './pages/reserve/reserve.component';
 import { NavTabComponent } from './common/nav-tab/nav-tab.component';
 import { ActivityComponent } from './pages/activity/activity.component';
 import { FindComponent } from './pages/find/find.component';
 import { MyComponent } from './pages/my/my.component';
 import { HeaderComponent } from './common/header/header.component';
-import { ChildComponent } from './components/child/child.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 
 /** 属性指令组件 **/
@@ -37,14 +35,12 @@ import { UserService } from './services/userService';
         AppComponent,
         NavTabComponent,
         HomeComponent,
-        ReserveComponent,
         ActivityComponent,
         FindComponent,
         MyComponent,
         HeaderComponent,
         HighLightDirective,
-        ChildComponent,
-        UserInfoComponent,
+        UserInfoComponent
     ],
     imports: [
         BrowserModule,
@@ -59,6 +55,8 @@ import { UserService } from './services/userService';
             deps: [Http]
         }),
         WeUiModule.forRoot()
+    ],
+    exports: [
     ],
     providers: [
         GetPersonsService,
