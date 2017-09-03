@@ -7,7 +7,6 @@ import { ActivityComponent } from '../pages/activity/activity.component';
 import { FindComponent } from '../pages/find/find.component';
 import { MyComponent } from '../pages/my/my.component';
 import { UserInfoComponent } from '../pages/user-info/user-info.component';
-import { PageNotFoundComponentComponent } from '../pages/page-not-found-component/page-not-found-component.component';
 
 
 /** 使用异步加载路由的方式可以提高加载速度，提高第一次的加载速度 **/
@@ -19,7 +18,6 @@ const routes: Routes = [
     { path: 'find', component: FindComponent },
     { path: 'my', component: MyComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', component: PageNotFoundComponentComponent }
 ];
 
 

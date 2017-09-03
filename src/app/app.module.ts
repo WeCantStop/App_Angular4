@@ -27,12 +27,10 @@ import { UserInfoComponent } from './pages/user-info/user-info.component';
 
 /** 属性指令组件 **/
 import { HighLightDirective } from './attribute-directives/high-light.directive';
-import { showConsoleDirective } from './attribute-directives/show-console.directive';
 
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
 import { UserService } from './services/userService';
-import { PageNotFoundComponentComponent } from './pages/page-not-found-component/page-not-found-component.component';
 
 @NgModule({
     declarations: [
@@ -45,10 +43,8 @@ import { PageNotFoundComponentComponent } from './pages/page-not-found-component
         MyComponent,
         HeaderComponent,
         HighLightDirective,
-        showConsoleDirective,
         ChildComponent,
         UserInfoComponent,
-        PageNotFoundComponentComponent
     ],
     imports: [
         BrowserModule,
