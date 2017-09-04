@@ -1,19 +1,25 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
-import { ReserveComponent } from './reserve.component';
+import {ReserveComponent} from './reserve.component';
+import {ChildpageComponent} from './childpage/childpage.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ReserveComponent
-  }
+    {
+        path: '',
+        component: ReserveComponent,
+        children: [
+            {path: 'child', component: ChildpageComponent},
+            {path: '', redirectTo: 'child', pathMatch: 'full'}
+        ]
+    },
 ];
 
 @NgModule({
-  imports:[RouterModule.forChild(routes)],
-  exports:[RouterModule],
-  providers:[]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
+    providers: []
 })
 
-export class ReserveRoutingModule {}
+export class ReserveRoutingModule {
+}

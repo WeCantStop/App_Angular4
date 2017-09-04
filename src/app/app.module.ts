@@ -22,9 +22,11 @@ import { FindComponent } from './pages/find/find.component';
 import { MyComponent } from './pages/my/my.component';
 import { HeaderComponent } from './common/header/header.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
+import { PageNotFoundComponentComponent } from './pages/page-not-found-component/page-not-found-component.component';
 
 /** 属性指令组件 **/
 import { HighLightDirective } from './attribute-directives/high-light.directive';
+import { showConsoleDirective } from './attribute-directives/show-console.directive';
 
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
@@ -40,7 +42,9 @@ import { UserService } from './services/userService';
         MyComponent,
         HeaderComponent,
         HighLightDirective,
-        UserInfoComponent
+        UserInfoComponent,
+        showConsoleDirective,
+        PageNotFoundComponentComponent
     ],
     imports: [
         BrowserModule,

@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class FindComponent implements OnInit {
 
-    private userName;
-    private users;
+    public userName;
+    public users;
     constructor(private userService: UserService, private router: Router) {
     }
 
@@ -18,7 +18,7 @@ export class FindComponent implements OnInit {
         this.userName = '';
         this.userService.getUsers({}).subscribe(res => {
             this.users = res.data;
-        })
+        });
     }
 
     // 增加用户

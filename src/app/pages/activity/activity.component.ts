@@ -9,7 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class ActivityComponent implements OnInit {
 
-    private resData;
+    public resData;
 
     constructor(private getPersonService: GetPersonsService, private http: HttpClient) {
     }

@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild, AfterViewInit, ViewContainerRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-reserve',
@@ -12,7 +13,7 @@ export class ReserveComponent implements OnInit, AfterViewInit {
     tplVcRef: TemplateRef<any>;
     name: string;
     age: string;
-    childName: string = 'hello,Child';
+    childName = 'hello,Child';
 
     itemGroup: any = [
         [
@@ -40,7 +41,7 @@ export class ReserveComponent implements OnInit, AfterViewInit {
         ]
     ];
 
-    constructor() { }
+    constructor(private route: Router) { }
 
     ngOnInit() { }
 
@@ -51,6 +52,10 @@ export class ReserveComponent implements OnInit, AfterViewInit {
     getData(data) {
         this.name = data.name;
         this.age = data.age;
+    }
+
+    goChildPage() {
+        this.route.navigateByUrl('reserve/child');
     }
 
 }

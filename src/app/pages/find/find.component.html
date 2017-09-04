@@ -2,7 +2,7 @@
 <h2>find page!</h2>
 <div class="action-panel">
   <input type="text" [(ngModel)]="userName" (keyup)="addUser($event)">
-  <button (click)="addUser()">Add User</button>
+  <button (click)="addUser($event)">Add User</button>
 </div>
 
 <div class="show-container">

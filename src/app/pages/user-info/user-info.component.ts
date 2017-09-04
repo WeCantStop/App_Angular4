@@ -11,9 +11,9 @@ import 'rxjs/add/operator/switchMap';
 })
 export class UserInfoComponent implements OnInit {
 
-  private userInfo: User;
-  private name: string;
-  private id: number;
+  public userInfo: User;
+  public name: string;
+  public id: number;
 
   constructor(private route: ActivatedRoute, private userService: UserService) {
   }

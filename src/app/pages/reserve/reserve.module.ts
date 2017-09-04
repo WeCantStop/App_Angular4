@@ -5,6 +5,7 @@ import { WeUiModule } from 'ngx-weui';
 
 import { ReserveComponent } from './reserve.component';
 import { ChildComponent } from '../../components/child/child.component';
+import { ChildpageComponent } from './childpage/childpage.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { ChildComponent } from '../../components/child/child.component';
     ReserveRoutingModule,
     WeUiModule.forRoot()
   ],
-  declarations: [ ReserveComponent, ChildComponent ]
+  declarations: [ ReserveComponent, ChildpageComponent, ChildComponent ]
 })
 export class ReserveModule { }
