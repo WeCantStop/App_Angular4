@@ -11,5 +11,6 @@
             <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
         </ul>
     </div>
+    <app-child account="will" (send)="getData($event)" #child></app-child>
 </div>
 <weui-actionsheet #ios [menus]="menus" [config]="config"></weui-actionsheet>

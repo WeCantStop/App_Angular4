@@ -13,6 +13,7 @@ import { ChildpageComponent } from './childpage/childpage.component';
     ReserveRoutingModule,
     WeUiModule.forRoot()
   ],
-  declarations: [ ReserveComponent, ChildpageComponent, ChildComponent ]
+  declarations: [ ReserveComponent, ChildpageComponent, ChildComponent ],
+    exports: [ChildComponent]
 })
 export class ReserveModule { }
