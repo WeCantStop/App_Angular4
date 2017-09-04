@@ -5,12 +5,13 @@
     <h2>It's Home page</h2>
     <button (click)="btnClick()">change language</button>
     <button (click)="onShow('ios')">showActions</button>
+    <button (click)="animate()" [@mask]="Mask">animate</button>
     <p></p>
     <div class="person-wrapper">
         <ul>
             <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
         </ul>
     </div>
-    <app-child account="will" (send)="getData($event)" #child></app-child>
+    <app-child account="will" #child></app-child>
 </div>
 <weui-actionsheet #ios [menus]="menus" [config]="config"></weui-actionsheet>

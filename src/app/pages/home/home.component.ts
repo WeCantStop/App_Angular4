@@ -3,11 +3,14 @@ import { TranslateService } from 'ng2-translate';
 import { SkinType } from 'ngx-weui';
 import { ActionSheetService, ActionSheetConfig, ActionSheetComponent } from 'ngx-weui/actionsheet';
 
+import { Mask } from '../../animations/mask';
+
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css']
+    styleUrls: ['./home.component.css'],
+    animations: [ Mask ]
 })
 export class HomeComponent implements OnInit {
     @ViewChild('ios') iosAS: ActionSheetComponent;
