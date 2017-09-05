@@ -2,14 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-import { WeUiModule } from 'ngx-weui';
-
-import { AppRouterModule } from './router';
-
 import { HttpModule, Http } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
+/** WeUi **/
+import { WeUiModule } from 'ngx-weui';
+
+/** 路由 **/
+import { AppRouterModule } from './router';
+
+/** 翻译 **/
 import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { createTranslateLoader } from './translate/translateLoader';
 

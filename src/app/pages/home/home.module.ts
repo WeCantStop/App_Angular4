@@ -14,6 +14,7 @@ import {HeaderComponent} from '../../common/header/header.component';
 import {HighLightDirective} from '../../attribute-directives/high-light.directive';
 
 import {ReserveModule} from '../reserve/reserve.module';
+import { MaskModule } from '../../components/mask/mask.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {ReserveModule} from '../reserve/reserve.module';
             useFactory: (createTranslateLoader),
             deps: [Http]
         }),
-        ReserveModule
+        ReserveModule,
+        MaskModule
     ],
     declarations: [HomeComponent, HeaderComponent, HighLightDirective]
 })

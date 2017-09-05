@@ -4,16 +4,18 @@ import { SkinType } from 'ngx-weui';
 import { ActionSheetService, ActionSheetConfig, ActionSheetComponent } from 'ngx-weui/actionsheet';
 
 import { Mask } from '../../animations/mask';
-
+import { MaskComponent } from '../../components/mask/mask.component';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
+    // 注册动画
     animations: [ Mask ]
 })
 export class HomeComponent implements OnInit {
     @ViewChild('ios') iosAS: ActionSheetComponent;
+    @ViewChild('mask') mask: MaskComponent;
     menus: any[] = [
         { text: 'item1', key: '1' },
         { text: 'item2', key: '2' },
@@ -22,6 +24,8 @@ export class HomeComponent implements OnInit {
     config: ActionSheetConfig = <ActionSheetConfig>{
         title: '请选择其中一个item'
     };
+
+    public show = 'show';
     constructor(
         public translate: TranslateService,
         public actionSheet: ActionSheetService
@@ -48,6 +52,11 @@ export class HomeComponent implements OnInit {
                 console.log('type', res);
             });
         }, 10);
+    }
+
+    animate(isNormal: boolean = false) {
+        this.mask.show();
+        this.mask.backdrop = true;
     }
 
 }
