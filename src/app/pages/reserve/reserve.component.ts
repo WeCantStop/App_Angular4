@@ -1,10 +1,13 @@
 import { Component, OnInit, TemplateRef, ViewChild, AfterViewInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { FadeIn } from '../../animations/fadeIn.animation';
+
 @Component({
     selector: 'app-reserve',
     templateUrl: './reserve.component.html',
-    styleUrls: ['./reserve.component.css']
+    styleUrls: ['./reserve.component.css'],
+    animations: [FadeIn]
 })
 export class ReserveComponent implements OnInit, AfterViewInit {
     @ViewChild('tpl')

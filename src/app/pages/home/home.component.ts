@@ -4,6 +4,7 @@ import { SkinType } from 'ngx-weui';
 import { ActionSheetService, ActionSheetConfig, ActionSheetComponent } from 'ngx-weui/actionsheet';
 
 import { Mask } from '../../animations/mask';
+import { FadeIn } from '../../animations/fadeIn.animation';
 import { MaskComponent } from '../../components/mask/mask.component';
 
 @Component({
@@ -11,7 +12,7 @@ import { MaskComponent } from '../../components/mask/mask.component';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
     // 注册动画
-    animations: [ Mask ]
+    animations: [ Mask, FadeIn ]
 })
 export class HomeComponent implements OnInit {
     @ViewChild('ios') iosAS: ActionSheetComponent;

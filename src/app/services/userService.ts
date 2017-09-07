@@ -19,7 +19,7 @@ export class UserService {
     }
 
     getUsers(data): Observable<any> {
-        return this.https.post('http://localhost:3008/users/getUser',data).map(res => res.json());
+        return this.https.post('http://localhost:3008/users/getUser', data).map(res => res.json());
     }
 
     delUser(data): Observable<any> {

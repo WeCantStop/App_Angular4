@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'reserve', loadChildren: '../pages/reserve/reserve.module#ReserveModule' },
     { path: 'activity', component: ActivityComponent },
     { path: 'find', component: FindComponent },
-    { path: 'my', component: MyComponent },
+    { path: 'person', component: MyComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

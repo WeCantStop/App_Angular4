@@ -18,13 +18,20 @@ export class NavTabComponent implements OnInit {
         {index: '2', text: '预约', target: 'reserve', icon: 'icon-reserve-border'},
         {index: '3', text: '活动', target: 'activity', icon: 'icon-activity-border'},
         {index: '4', text: '发现', target: 'find', icon: 'icon-find-border'},
-        {index: '5', text: '我的', target: 'my', icon: 'icon-person-border'}
+        {index: '5', text: '我的', target: 'person', icon: 'icon-person-border'}
     ];
 
     ngOnInit() {
     }
 
-    selectNav($event, target) {
+    selectNav(target) {
+        this.navs.forEach(item => {
+            if (item.target === target) {
+                item.icon = `icon-${target}-full`;
+            } else {
+                item.icon = `icon-${item.target}-border`;
+            }
+        });
         this.router.navigate([target]);
     }
 
