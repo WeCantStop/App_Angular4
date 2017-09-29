@@ -46,6 +46,6 @@ export class FindComponent implements OnInit {
 
     // 去用户详情
     getUserDetail(id) {
-        this.router.navigate(['user/userInfo',id]);
+        this.router.navigate(['user/userInfo', id]);
     }
 }
