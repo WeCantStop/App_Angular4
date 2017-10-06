@@ -15,14 +15,24 @@ export class UserService {
         /**
          * req: {name: ""}
          */
-        return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
+        // express
+        // return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
+        // koa2
+        return this.https.post('http://localhost:3001/test/connect',data).map(res => res.json());
     }
 
     getUsers(data): Observable<any> {
-        return this.https.post('http://localhost:3008/users/getUser', data).map(res => res.json());
+        // express
+        // return this.https.post('http://localhost:3008/users/getUser', data).map(res => res.json());
+        // koa2
+        return this.https.post('http://localhost:3001/test/getUser', data).map(res => res.json());        
     }
 
     delUser(data): Observable<any> {
-        return this.https.post('http://localhost:3008/users/delUser', data).map(res => res.json());
+        // express
+        // return this.https.post('http://localhost:3008/users/delUser', data).map(res => res.json());
+        // koa2
+        return this.https.post('http://localhost:3001/test/delUser', data).map(res => res.json());
+        
     }
 }
