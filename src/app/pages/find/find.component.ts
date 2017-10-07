@@ -22,7 +22,7 @@ export class FindComponent implements OnInit {
     }
 
     // 增加用户
-    addUser($event) {
+    addUser($event) { 
         if (!!$event && $event.keyCode === 13 || !$event) {
             let req = { name: this.userName };
             this.userService.addUser(req).subscribe(res => {
