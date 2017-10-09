@@ -22,8 +22,8 @@ export class FindComponent implements OnInit {
     }
 
     // 增加用户
-    addUser($event) { 
-        if (!!$event && $event.keyCode === 13 || !$event) {
+    addUser($event) {
+        if (!!$event && $event.keyCode === 13 || $event.type === 'click') {
             let req = { name: this.userName };
             this.userService.addUser(req).subscribe(res => {
                 this.userName = '';
