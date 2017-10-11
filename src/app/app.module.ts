@@ -19,7 +19,6 @@ import { createTranslateLoader } from './translate/translateLoader';
 import { AppComponent } from './app.component';
 import { NavTabComponent } from './common/nav-tab/nav-tab.component';
 import { ActivityComponent } from './pages/activity/activity.component';
-import { FindComponent } from './pages/find/find.component';
 import { MyComponent } from './pages/my/my.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 import { PageNotFoundComponentComponent } from './pages/page-not-found-component/page-not-found-component.component';
@@ -30,17 +29,18 @@ import { showConsoleDirective } from './attribute-directives/show-console.direct
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
 import { UserService } from './services/userService';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavTabComponent,
         ActivityComponent,
-        FindComponent,
         MyComponent,
         UserInfoComponent,
         showConsoleDirective,
-        PageNotFoundComponentComponent
+        PageNotFoundComponentComponent,
+        UserDetailComponent
     ],
     imports: [
         BrowserModule,

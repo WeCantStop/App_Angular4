@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'home', loadChildren: '../pages/home/home.module#HomeModule' },
     { path: 'reserve', loadChildren: '../pages/reserve/reserve.module#ReserveModule' },
     { path: 'activity', component: ActivityComponent },
-    { path: 'find', component: FindComponent },
+    { path: 'find', loadChildren: '../pages/find/find.module#FindModule' },
     { path: 'person', component: MyComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
