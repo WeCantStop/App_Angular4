@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {Http} from '@angular/http';
 
 import {TranslateModule, TranslateLoader} from 'ng2-translate/ng2-translate';
 import {createTranslateLoader} from '../../translate/translateLoader';
 
 import {FindComponent} from './find.component';
+import {UserDetailComponent} from './user-detail/user-detail.component';
 import {FindRoutingModule} from './find.routing';
 
 
@@ -22,7 +23,7 @@ import {FindRoutingModule} from './find.routing';
             deps: [Http]
         }),
     ],
-    declarations: [FindComponent]
+    declarations: [FindComponent,UserDetailComponent]
 })
 export class FindModule {
 }
