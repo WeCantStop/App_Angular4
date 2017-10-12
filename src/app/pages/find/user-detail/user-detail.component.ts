@@ -38,8 +38,8 @@ export class UserDetailComponent implements OnInit {
   // 保存用户信息
   saveUserDetail(userInfo) {
     this.userService.updateUserDeatil(userInfo).subscribe(res => {
-      this.userInfo = res.data;
-   });
+      window.alert('save success!');
+    });
   }
 
 }
