@@ -29,7 +29,6 @@ import { showConsoleDirective } from './attribute-directives/show-console.direct
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
 import { UserService } from './services/userService';
-import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
     declarations: [
@@ -39,8 +38,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
         MyComponent,
         UserInfoComponent,
         showConsoleDirective,
-        PageNotFoundComponentComponent,
-        UserDetailComponent
+        PageNotFoundComponentComponent
     ],
     imports: [
         BrowserModule,
