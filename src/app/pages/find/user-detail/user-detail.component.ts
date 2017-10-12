@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { UserService } from './../../../services/userService';
 
 @Component({
   selector: 'app-user-detail',
@@ -8,10 +9,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserDetailComponent implements OnInit {
 
-  constructor(public router: ActivatedRoute) { }
+  public userInfo;
+  constructor(public route: ActivatedRoute,
+              public userService: UserService) { }
 
   ngOnInit() {
-    console.log(this.router.params);
+    this.userInfo = {
+      name: '',
+      age: ''
+    };
+    // 1.history模式获取参数的方法
+    const userId = this.route.snapshot.paramMap.get('id');
+    this.userService.getUsers({id: userId}).subscribe(res => {
+       this.userInfo = res.data;
+    });
+
+    // 2.query模式获取参数的方法
+    // this.route.snapshot.queryParamMap.get()
+
+    // 直接拿到参数请求得方式
+    // this.route.params
+    //     .switchMap((params: ParamMap) => this.userService.getUsers(+params.get('id')))
+    //     .subscribe(res => console.log(res));
   }
 
 }

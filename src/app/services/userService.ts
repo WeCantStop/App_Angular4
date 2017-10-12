@@ -15,7 +15,6 @@ export class UserService {
         /**
          * req: {name: ""}
          */
-        
         // express
         // return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
 
@@ -28,7 +27,7 @@ export class UserService {
         // return this.https.post('http://localhost:3008/users/getUser', data).map(res => res.json());
 
         // koa2
-        return this.https.post('http://localhost:3001/test/getUser', data).map(res => res.json());        
+        return this.https.post('http://localhost:3001/test/getUser', data).map(res => res.json());
     }
 
     delUser(data): Observable<any> {
