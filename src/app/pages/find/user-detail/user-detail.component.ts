@@ -16,7 +16,9 @@ export class UserDetailComponent implements OnInit {
   ngOnInit() {
     this.userInfo = {
       name: '',
-      age: ''
+      age: 0,
+      gender: '',
+      homeTown: ''
     };
     // 1.history模式获取参数的方法
     const userId = this.route.snapshot.paramMap.get('id');
@@ -31,6 +33,13 @@ export class UserDetailComponent implements OnInit {
     // this.route.params
     //     .switchMap((params: ParamMap) => this.userService.getUsers(+params.get('id')))
     //     .subscribe(res => console.log(res));
+  }
+
+  // 保存用户信息
+  saveUserDetail(userInfo) {
+    this.userService.updateUserDeatil(userInfo).subscribe(res => {
+      this.userInfo = res.data;
+   });
   }
 
 }

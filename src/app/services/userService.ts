@@ -19,7 +19,7 @@ export class UserService {
         // return this.https.post('http://localhost:3008/users/addUser', data).map(res => res.json());
 
         // koa2
-        return this.https.post('http://localhost:3001/test/connect',data).map(res => res.json());
+        return this.https.post('http://localhost:3001/test/connect', data).map(res => res.json());
     }
 
     getUsers(data): Observable<any> {
@@ -28,6 +28,10 @@ export class UserService {
 
         // koa2
         return this.https.post('http://localhost:3001/test/getUser', data).map(res => res.json());
+    }
+
+    updateUserDeatil(data): Observable<any> {
+        return this.https.post('http://localhost:3001/test/updateUserDetail', data).map(res => res.json());
     }
 
     delUser(data): Observable<any> {
