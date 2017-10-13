@@ -23,7 +23,7 @@ import {FindRoutingModule} from './find.routing';
             deps: [Http]
         }),
     ],
-    declarations: [FindComponent,UserDetailComponent]
+    declarations: [FindComponent, UserDetailComponent]
 })
 export class FindModule {
 }

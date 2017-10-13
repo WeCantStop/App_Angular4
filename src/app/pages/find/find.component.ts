@@ -36,12 +36,14 @@ export class FindComponent implements OnInit {
 
     // 删除用户
     delUser($event) {
-        let name = $event.name;
-        this.userService.delUser({ name: name }).subscribe(res => {
-            this.userService.getUsers({}).subscribe(res => {
-                this.users = res.data;
+        if (window.confirm('确定删除么?')) {
+            const name = $event.name;
+            this.userService.delUser({ name: name }).subscribe(res => {
+                this.userService.getUsers({}).subscribe(res => {
+                    this.users = res.data;
+                });
             });
-        });
+        }
     }
 
     // 去用户详情 (未完成) => 首先做到能够查到用户的信息

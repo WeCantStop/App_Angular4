@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { UserService } from './../../../services/userService';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-detail',
@@ -11,7 +12,9 @@ export class UserDetailComponent implements OnInit {
 
   public userInfo;
   constructor(public route: ActivatedRoute,
-              public userService: UserService) { }
+              public userService: UserService,
+              public location: Location
+            ) { }
 
   ngOnInit() {
     this.userInfo = {
@@ -38,7 +41,8 @@ export class UserDetailComponent implements OnInit {
   // 保存用户信息
   saveUserDetail(userInfo) {
     this.userService.updateUserDeatil(userInfo).subscribe(res => {
-      window.alert('save success!');
+      window.alert('save success!')
+      this.location.back();
     });
   }
 
