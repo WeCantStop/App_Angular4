@@ -46,4 +46,8 @@ export class UserDetailComponent implements OnInit {
     });
   }
 
+  goBack() {
+    this.location.back();
+  }
+
 }

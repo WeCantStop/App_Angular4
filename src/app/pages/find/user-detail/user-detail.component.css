@@ -7,7 +7,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.submit-btn {
+.submit-btn, .back-btn {
     height: 30px;
     width: 70%;
     margin: 0 auto;
@@ -16,4 +16,10 @@ h2 {
     background: #000000;
     text-align: center;
     color: #FFF;
+}
+
+.back-btn {
+    background: #CCC;
+    margin-top: 10px;
+    color: #000;
 }
