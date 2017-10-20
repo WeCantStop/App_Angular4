@@ -16,8 +16,10 @@
 }
 
 .header-title {
-  line-height: 44px;
   height: 44px;
+  width: 100%;
+  text-align: center;
+  line-height: 44px;  
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,4 +31,8 @@
 
 .header-title img {
   max-height: 98%;
+}
+
+.header-title h1 {
+  color: #00b600
 }

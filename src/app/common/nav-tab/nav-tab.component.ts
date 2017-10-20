@@ -14,11 +14,11 @@ export class NavTabComponent implements OnInit {
     }
 
     navs = [
-        {index: '1', text: '首页', target: 'home', icon: 'icon-home-border'},
-        {index: '2', text: '预约', target: 'reserve', icon: 'icon-reserve-border'},
-        {index: '3', text: '活动', target: 'activity', icon: 'icon-activity-border'},
-        {index: '4', text: '发现', target: 'find', icon: 'icon-find-border'},
-        {index: '5', text: '我的', target: 'person', icon: 'icon-person-border'}
+        {index: '1', text: '电影', target: 'home', icon: 'icon-home-border'},
+        {index: '2', text: '图书', target: 'reserve', icon: 'icon-reserve-border'},
+        {index: '3', text: '搜索', target: 'activity', icon: 'icon-activity-border'},
+        {index: '4', text: '广播', target: 'find', icon: 'icon-find-border'},
+        {index: '5', text: '小组', target: 'person', icon: 'icon-person-border'}
     ];
 
     ngOnInit() {

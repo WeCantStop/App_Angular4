@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'app-header',
@@ -20,10 +21,18 @@ export class HeaderComponent implements OnInit {
     @Input() leftText;
     @Input() clickLeft;
 
-    constructor() {
+    constructor(public $location: Location) {
     }
 
     ngOnInit() {
+        if (!!this.showBack){
+            this.clickLeft = function() {
+                this.$location.back();
+            }
+        }
+        if (!this.clickLeft){
+            this.clickLeft = function(){};
+        }
     }
 
 
