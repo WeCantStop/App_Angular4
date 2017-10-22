@@ -1,20 +1,11 @@
 <div [@fadeIn]>
     <app-header title="我的豆瓣"></app-header>
-    <div class="main-container" [@mask]="show">
-        <h1>{{ 'hello' | translate }}</h1>
-        <h2>It's Home page</h2>
-        <button (click)="btnClick()">change language</button>
-        <button (click)="onShow('ios')">showActions</button>
-        <button (click)="animate()">animate</button>
-        <div class="person-wrapper">
-            <ul>
-                <li *ngFor="let person of persons" [heightLight]="'skyblue'">{{person}}</li>
-            </ul>
-        </div>
-        <app-child account="will" #child></app-child>
-    </div>
-    <weui-actionsheet #ios [menus]="menus" [config]="config"></weui-actionsheet>
-
-    <yk-mask #mask></yk-mask>
+    <ul>
+        <li *ngFor="let article of articles">
+            <div>
+                {{article.title}}
+            </div>
+        </li>
+    </ul>
 </div>
 
