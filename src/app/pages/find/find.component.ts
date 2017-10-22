@@ -46,7 +46,7 @@ export class FindComponent implements OnInit {
         }
     }
 
-    // 去用户详情 (未完成) => 首先做到能够查到用户的信息
+    // 去用户详情
     goUserDetail(id) {
         this.router.navigate(['find/userDetail', id]);
         // this.userService.getUsers({ id: id }).subscribe(res => {

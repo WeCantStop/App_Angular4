@@ -29,6 +29,7 @@ import { showConsoleDirective } from './attribute-directives/show-console.direct
 /** Service **/
 import { GetPersonsService } from './services/getPersons';
 import { UserService } from './services/userService';
+import { ApiService } from './services/doubanAPI';
 
 @NgModule({
     declarations: [
@@ -58,7 +59,8 @@ import { UserService } from './services/userService';
     ],
     providers: [
         GetPersonsService,
-        UserService
+        UserService,
+        ApiService
     ],
     bootstrap: [AppComponent]
 })

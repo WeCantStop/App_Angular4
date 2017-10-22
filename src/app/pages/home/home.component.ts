@@ -6,6 +6,7 @@ import { ActionSheetService, ActionSheetConfig, ActionSheetComponent } from 'ngx
 import { Mask } from '../../animations/mask';
 import { FadeIn } from '../../animations/fadeIn.animation';
 import { MaskComponent } from '../../components/mask/mask.component';
+import { ApiService } from '../../services/doubanAPI';
 
 @Component({
     selector: 'app-home',
@@ -29,12 +30,16 @@ export class HomeComponent implements OnInit {
     public show = 'show';
     constructor(
         public translate: TranslateService,
-        public actionSheet: ActionSheetService
+        public actionSheet: ActionSheetService,
+        public apiService: ApiService
     ) { }
 
     persons = ['one', 'two', 'three', 'four'];
 
     ngOnInit() {
+        this.apiService.initData({}).subscribe(res => {
+            console.log(res);
+        });
     }
 
     btnClick() {
